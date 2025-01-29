@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Green Team</title>
     <style>
+        /* General styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
             background-color: #e8f5e9;
             color: #333;
+            transition: background-color 0.3s ease-in-out;
         }
 
         h1 {
@@ -31,6 +33,11 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             display: block;
             margin: 20px auto;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
         }
 
         p {
@@ -81,6 +88,12 @@
             margin: 20px auto;
             max-width: 600px;
             text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .info-box h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
 
         footer {
@@ -90,12 +103,14 @@
             background-color: #388E3C;
             color: white;
             border-radius: 10px;
+            animation: fadeIn 1.5s ease-out;
         }
 
         .products-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 20px;
         }
 
         .card {
@@ -105,8 +120,9 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin: 15px;
             max-width: 300px;
-            flex: 1 1 300px; /* Allow flexible resizing */
+            flex: 1 1 300px;
             text-align: center;
+            animation: fadeIn 1.5s ease-out;
         }
 
         .card img {
@@ -118,6 +134,18 @@
             margin-top: 10px;
         }
 
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
         @media (max-width: 900px) {
             h1 {
                 font-size: 2em;
@@ -195,6 +223,15 @@
                 <p>Boost your plant growth naturally.</p>
             </div>
         </div>
+    </div>
+
+    <!-- Pyrolysis Section -->
+    <div class="info-box">
+        <h2>Pyrolysis Process - Turning Plastic to Petrol</h2>
+        <p>Pyrolysis is a thermochemical process that transforms plastic waste into useful petrol-like fuels.</p>
+        <button><a href="pyrolysis.html">
+            <h3>Learn More About Pyrolysis</h3>
+        </a></button>
     </div>
 
     <footer>
